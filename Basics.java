@@ -20,6 +20,10 @@ public class Basics {
         Student rajneesh = new Student(94, "Rajneesh Yadav", 89.4f);
         System.out.println(rajneesh.marks);
         rajneesh.greetings();
+
+//giving an object the properties of an another object
+        Student amar = new Student(rajneesh);
+        System.out.println(amar.name);
     }
 
 }
@@ -39,6 +43,13 @@ class Student{
             this.name = "virat";
             this.roll = 84;
             this.marks = 82.3f;
+        }
+
+        //creating a constructor which takes properties from another object
+        Student(Student other){
+            this.name = other.name; //give the properties of other object to the current object
+            this.roll = other.roll; //this refers to amar and other refers to rajneesh
+            this.marks = other.marks;
         }
 
         //another constructor with the parameters
