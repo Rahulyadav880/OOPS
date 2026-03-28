@@ -24,6 +24,15 @@ public class Basics {
 //giving an object the properties of an another object
         Student amar = new Student(rajneesh);
         System.out.println(amar.name);
+
+        final A raOne = new A("rahul yadav");//here we have made the object as final obj
+        raOne.name = "rajjo";//but we are able to change the value
+        System.out.println(raOne.name);
+
+        //when a non-primitive is final then we can't re-initialize it
+        //but i can't do like this
+        //raOne = new A("new name");
+
     }
 
 }
@@ -57,5 +66,15 @@ class Student{
             this.roll = roll;
             this.name = naam; // we can also name the parameters differently just like here
             this.marks = marks; // but by convention we keep them same as the properties
+        }
+    }
+
+    class A{
+        final int a = 10; //if you only declare the
+        //  variable with 'final' keyword then it will give error
+
+        String name;
+        A(String name){
+            this.name = name;
         }
     }
