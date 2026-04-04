@@ -20,7 +20,19 @@ public class Main {
         BoxWeight box5 = new BoxWeight(2, 3, 4, 5);
         System.out.println(box5.l + " " + box5.b + " " + box5.h + " " + box5.weight);
 
-         BoxWeight box6 = new BoxWeight();
-         System.out.println(box6.weight);
+        BoxWeight box6 = new BoxWeight();
+        System.out.println(box6.weight);
+
+        //now, let's see some interesting concept
+
+        //here we can't access the weight property because In Java, the compiler only 
+        //allows to access the properties that are in reference type(i.e. Box) not in the object type
+        //Box box7 = new BoxWeight(2, 3, 4, 5);//here BoxWeight can call its parent class constructor via super keyword
+        //System.out.println(box7.weight); 
+
+        //here the reference type is BoxWeight and Box(parent class) is an object and how can it call 
+        // the constructor of the child class. that's why, it is giving error.
+        //since it is the definition that the object will call the constructor of its type
+        // BoxWeight box8 = new Box(1, 2, 3); //Box can't call the constructor of BoxWeight 
     }
 }
