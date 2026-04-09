@@ -5,6 +5,10 @@ public class Main {
         Shapes shape = new Shapes();
         Triangle triangle = new Triangle();
         Square square = new Square();
+
+        //what will be accessed depends on the reference type and what will be executed 
+        //depends on the object type
+
         Shapes square1 = new Square(); //Java reads the right side first
         //but we can't do it like this
         //Square square1 = new Shapes(); as it will give error
