@@ -8,13 +8,16 @@ public class AbstractDemo {
 
         //we can also access it with the help of the className
         Parent.goal();
+
+        Parent child1 = new Child(23); //we can also do like this
+        child.career();
     }
 }
 
 //if a class contains atleast one abstract method then the class must be an abstract class
 //we can't create the object of an abstract class(since can't create a abstract constructor).
 //Abstract constructor doesn't has a body then how can the object call it? (abstract Parent(int age);)
-abstract class Parent{ 
+abstract class Parent{ //we can't make abstract class as final(if done then it can't be inherited)
     int age;
 
     Parent(int age){
